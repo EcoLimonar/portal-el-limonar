@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Limonar Ecohotel - Donde el Lujo se encuentra con lo Natural</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --verde-limon: #2B4C0B;
+            --verde-vibrante: #7CB342;
+            --amarillo-citrico: #F4FF81;
+            --crema: #FAFAF2;
+        }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--crema); color: var(--verde-limon); scroll-behavior: smooth; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        
+        .nav-scrolled { background-color: rgba(255, 255, 255, 0.98); box-shadow: 0 10px 30px rgba(0,0,0,0.1); padding-top: 0.5rem; padding-bottom: 0.5rem; }
+        
+        .hero-main {
+            background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)), 
+                        url('https://lh3.googleusercontent.com/d/18yXgSCsPJQGEBbgbHnHlJVlZFd619OqT');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .experience-card:hover img { transform: scale(1.05); }
+        .cabin-card:hover { transform: translateY(-10px); border-color: var(--verde-vibrante); }
+        
+        .logo-hero { filter: drop-shadow(0 15px 30px rgba(0,0,0,0.4)); animation: float 6s ease-in-out infinite; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Vistas de Detalle */
+        .view-section { display: none; opacity: 0; transition: opacity 0.5s ease; }
+        .view-section.active { display: block; opacity: 1; }
+        
+        .animate-in { animation: slideUp 0.6s ease-out forwards; }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .custom-shadow { box-shadow: 0 20px 40px rgba(43, 76, 11, 0.1); }
+    </style>
+</head>
+<body class="text-center overflow-x-hidden">
+
+    <!-- Navegación Principal -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <img src="https://lh3.googleusercontent.com/d/1LNTkboFIGhJdPeAVw-08ffqZQP3cqIHm" alt="Logo" class="w-32 md:w-40 transition-all cursor-pointer" onclick="showView('home')">
+            <div class="hidden md:flex items-center gap-10 font-black text-[10px] uppercase tracking-[0.2em] text-white" id="nav-links">
+                <a href="#esencia" class="hover:text-amarillo-citrico transition-colors" onclick="showView('home')">Esencia</a>
+                <a href="#hospedaje" class="hover:text-amarillo-citrico transition-colors" onclick="showView('home')">Refugios</a>
+                <a href="https://wa.me/573107076066" target="_blank" class="bg-white text-[#2B4C0B] px-8 py-3 rounded-full hover:bg-amarillo-citrico transition-all shadow-lg font-bold">RESERVAR</a>
+            </div>
+            <button class="md:hidden text-white" onclick="showView('home')">
+                <i class="fa-solid fa-home text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- VISTA HOME -->
+    <main id="home-view" class="view-section active text-center">
+        <!-- Hero -->
+        <section class="hero-main h-screen flex flex-col items-center justify-center text-white p-6 relative">
+            <div class="relative z-10 text-center max-w-4xl animate-in">
+                <img src="https://lh3.googleusercontent.com/d/1LNTkboFIGhJdPeAVw-08ffqZQP3cqIHm" alt="Logo" class="w-64 md:w-80 mx-auto mb-10 logo-hero">
+                <h1 class="text-2xl md:text-4xl font-bold mb-6 tracking-widest drop-shadow-2xl leading-tight text-white text-center">
+                    Donde el Lujo se encuentra con <br> <span class="text-[#F4FF81] italic">lo Natural</span>
+                </h1>
+                <div class="w-24 h-1 bg-[#F4FF81] mx-auto mb-8 rounded-full shadow-lg"></div>
+            </div>
+        </section>
+
+        <!-- Esencia -->
+        <section id="esencia" class="py-24 px-6 bg-white text-center">
+            <div class="max-w-7xl mx-auto text-center">
+                <div class="mb-20">
+                    <span class="text-verde-vibrante font-black tracking-[0.5em] uppercase text-xs mb-4 block">Nuestra Alma</span>
+                    <h2 class="text-4xl md:text-6xl font-bold text-[#2B4C0B]">Experiencias El Limonar</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-12 text-center">
+                    <!-- La Cocina de la Abuela -->
+                    <div class="experience-card bg-[#FAFAF2] rounded-[3rem] overflow-hidden shadow-2xl border border-gray-50 group flex flex-col text-center">
+                        <div class="h-64 overflow-hidden bg-gray-50">
+                            <img src="https://lh3.googleusercontent.com/d/1Sl7_Wk_iiwF1_xOABTLz_Flpsaz5RDYE" 
+                                 class="w-full h-full object-cover transition-transform duration-1000"
+                                 style="object-position: 85% center;"
+                                 alt="Plato y Limonada Cerezada">
+                        </div>
+                        <div class="p-10 flex flex-col items-center">
+                            <h3 class="text-2xl font-bold mb-4">La Cocina de la Abuela</h3>
+                            <p class="text-gray-500 italic text-sm mb-8 leading-relaxed">Sabor ancestral productos orgánicos y agro ecológicos. Alimentación Km 0 de la finca a la mesa.</p>
+                            <a href="https://ecolimonar.github.io/la_cocina_de_la_abuela.html/" target="_blank" class="w-full bg-[#2B4C0B] text-white py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-verde-vibrante transition-all text-center">Ver Bitácora</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Bitácora Natural -->
+                    <div class="experience-card bg-[#FAFAF2] rounded-[3rem] overflow-hidden shadow-2xl border border-gray-50 group flex flex-col text-center">
+                        <div class="h-64 overflow-hidden bg-gray-50">
+                            <img src="https://lh3.googleusercontent.com/d/1DHzFmNrPyujZU3y6D2H8v1qSTJC8Z6dz" 
+                                 class="w-full h-full object-cover transition-transform duration-1000"
+                                 alt="Biodiversidad">
+                        </div>
+                        <div class="p-10 flex flex-col items-center">
+                            <h3 class="text-2xl font-bold mb-4">Bitácora Natural</h3>
+                            <p class="text-gray-500 italic text-sm mb-8 leading-relaxed">Conoce a Rosita la lorita real y explora con ella la biodiversidad del Bosque Seco Tropical.</p>
+                            <a href="https://ecolimonar.github.io/poster_bio_limonar.html/" target="_blank" class="w-full bg-[#2B4C0B] text-white py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-verde-vibrante transition-all text-center">Explorar</a>
+                        </div>
+                    </div>
+                    
+                    <!-- LEE Kuintro Efect -->
+                    <div class="experience-card bg-amber-50 rounded-[3rem] overflow-hidden shadow-2xl border border-amber-100 group flex flex-col text-center">
+                        <div class="h-64 overflow-hidden bg-gray-50">
+                            <img src="https://lh3.googleusercontent.com/d/1JUI1g0jXAtH1lzrSCYey_EiRpcYYNPb2" 
+                                 class="w-full h-full object-cover transition-transform duration-1000"
+                                 alt="Yoga y Meditación">
+                        </div>
+                        <div class="p-10 flex flex-col items-center">
+                            <h3 class="text-2xl font-bold mb-4 text-amber-800">LEE Kuintro Efect</h3>
+                            <p class="text-amber-900/60 italic text-sm mb-8 leading-relaxed">Yoga, meditación, respiración consciente, y conexión con la naturaleza.</p>
+                            <!-- Enlace actualizado a la página externa de GitHub -->
+                            <a href="https://ecolimonar.github.io/lee_kuintro_efect.html/" target="_blank" class="w-full bg-amber-600 text-white py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-amber-700 transition-all text-center">Ver Experiencia</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hospedaje -->
+        <section id="hospedaje" class="py-24 bg-[#F2F2E6] border-y border-gray-200 text-center">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <div class="mb-20">
+                    <span class="text-verde-vibrante font-black tracking-[0.5em] uppercase text-xs mb-4 block">El Equilibrio del Cuatro</span>
+                    <h2 class="text-4xl md:text-6xl font-bold text-[#2B4C0B]">Refugios Cítricos</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                    <!-- Mandarina -->
+                    <div class="cabin-card bg-white rounded-[3rem] p-8 shadow-xl transition-all cursor-pointer group border border-transparent" onclick="showCabin('mandarina')">
+                        <div class="h-48 w-full mb-8 rounded-[2rem] overflow-hidden relative text-center">
+                            <img src="https://lh3.googleusercontent.com/d/1JK0Vn6vUJZfh_rLVABtzsd--ks2CN4NR" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute bottom-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-[9px] font-black uppercase">Cap. 6</div>
+                        </div>
+                        <h4 class="text-2xl font-bold text-orange-500 mb-2">Mandarina</h4>
+                        <p class="text-[10px] uppercase font-black tracking-widest text-gray-400 mb-6 italic">Equilibrio & Estabilidad</p>
+                        <div class="text-[11px] font-black text-[#2B4C0B] uppercase">Ver Detalles <i class="fa-solid fa-arrow-right-long ml-2"></i></div>
+                    </div>
+
+                    <!-- Limón -->
+                    <div class="cabin-card bg-white rounded-[3rem] p-8 shadow-xl transition-all cursor-pointer group border border-transparent" onclick="showCabin('limon')">
+                        <div class="h-48 w-full mb-8 rounded-[2rem] overflow-hidden relative text-center">
+                            <img src="https://lh3.googleusercontent.com/d/1nXvzCi0uV6FUiA-3kGxECRqb63AvSjjX" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 text-center">
+                            <div class="absolute bottom-4 right-4 bg-lime-500 text-white px-3 py-1 rounded-full text-[9px] font-black uppercase text-center text-center">Cap. 6</div>
+                        </div>
+                        <h4 class="text-2xl font-bold text-lime-500 mb-2 text-center text-center">Limón</h4>
+                        <p class="text-[10px] uppercase font-black tracking-widest text-gray-400 mb-6 italic text-center text-center">Luz & Energía</p>
+                        <div class="text-[11px] font-black text-[#2B4C0B] uppercase text-center text-center text-center">Ver Detalles <i class="fa-solid fa-arrow-right-long ml-2 text-center"></i></div>
+                    </div>
+
+                    <!-- Toronja -->
+                    <div class="cabin-card bg-white rounded-[3rem] p-8 shadow-xl transition-all cursor-pointer group border border-transparent" onclick="showCabin('toronja')">
+                        <div class="h-48 w-full mb-8 rounded-[2rem] overflow-hidden relative text-center text-center text-center">
+                            <img src="https://lh3.googleusercontent.com/d/1RiN3AQFbG-PZ7Laj4-d42iRm5CUsqqiS" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 text-center text-center">
+                            <div class="absolute bottom-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-[9px] font-black uppercase text-center text-center text-center">Cap. 6</div>
+                        </div>
+                        <h4 class="text-2xl font-bold text-pink-500 mb-2 text-center text-center text-center">Toronja</h4>
+                        <p class="text-[10px] uppercase font-black tracking-widest text-gray-400 mb-6 italic text-center text-center text-center text-center">Calma & Distinción</p>
+                        <div class="text-[11px] font-black text-[#2B4C0B] uppercase text-center text-center text-center">Ver Detalles <i class="fa-solid fa-arrow-right-long ml-2 text-center text-center text-center"></i></div>
+                    </div>
+
+                    <!-- Naranja -->
+                    <div class="cabin-card bg-white rounded-[3rem] p-8 shadow-xl transition-all cursor-pointer group border border-transparent" onclick="showCabin('naranja')">
+                        <div class="h-48 w-full mb-8 rounded-[2rem] overflow-hidden relative text-center text-center text-center text-center text-center text-center">
+                            <img src="https://lh3.googleusercontent.com/d/1uZ7asYph-MnGUseYa_XqJ_TCdKdEmktW" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 text-center">
+                            <div class="absolute bottom-4 right-4 bg-orange-600 text-white px-3 py-1 rounded-full text-[9px] font-black uppercase text-center text-center">Cap. 2</div>
+                        </div>
+                        <h4 class="text-2xl font-bold text-orange-600 mb-2 text-center text-center text-center">Naranja</h4>
+                        <p class="text-[10px] uppercase font-black tracking-widest text-gray-400 mb-6 italic text-center text-center text-center">Intimidad & Romance</p>
+                        <div class="text-[11px] font-black text-[#2B4C0B] uppercase text-center text-center text-center">Ver Detalles <i class="fa-solid fa-arrow-right-long ml-2 text-center text-center"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- VISTA DE DETALLE (DINÁMICA) -->
+    <main id="detail-view" class="view-section text-center">
+        <div id="cabin-content" class="min-h-screen pb-20 text-center">
+            <!-- El contenido se inyecta con JS -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-[#2B4C0B] text-white pt-24 pb-16 px-6 text-center">
+        <div class="max-w-7xl mx-auto flex flex-col items-center">
+            <img src="https://lh3.googleusercontent.com/d/1LNTkboFIGhJdPeAVw-08ffqZQP3cqIHm" alt="" class="w-64 mb-16 opacity-90 drop-shadow-2xl">
+            <div class="grid md:grid-cols-2 gap-16 mb-20 w-full max-w-4xl text-center">
+                <div class="flex flex-col items-center">
+                    <h4 class="font-black text-xs uppercase tracking-[0.4em] mb-8 text-verde-vibrante text-center">Ubicación</h4>
+                    <p class="text-xl font-bold">Toluviejo, Sucre, Col.</p>
+                    <p class="text-[10px] uppercase tracking-widest opacity-60 mb-6 text-center text-center">Montes de María • Carretera Troncal</p>
+                    
+                    <!-- Enlace de Google Maps -->
+                    <a href="https://maps.app.goo.gl/5C1rZf68kudn2LNH8" target="_blank" class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-all border border-white/20">
+                        <i class="fa-solid fa-location-dot"></i> Ver en Google Maps
+                    </a>
+                </div>
+                <div class="flex flex-col items-center text-center text-center">
+                    <h4 class="font-black text-xs uppercase tracking-[0.4em] mb-8 text-verde-vibrante">Nuestra Red</h4>
+                    <div class="flex gap-6">
+                        <a href="https://instagram.com/limonarecohotel" target="_blank" class="text-3xl hover:text-verde-vibrante"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/573107076066" target="_blank" class="text-3xl hover:text-verde-vibrante"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Copyright Actualizado con año en negrilla -->
+            <div class="pt-10 border-t border-white/10 w-full text-[10px] uppercase tracking-[0.4em] opacity-70">
+                © <span class="font-black">2026 EL LIMONAR ECOHOTEL - SINFONÍA DE LA TIERRA</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const cabinData = {
+            mandarina: {
+                name: "Cabaña Mandarina",
+                tagline: "Dulce y refrescante",
+                concept: "Equilibrio & Estabilidad",
+                color: "text-orange-500",
+                bg: "bg-orange-500",
+                img: "https://lh3.googleusercontent.com/d/1JK0Vn6vUJZfh_rLVABtzsd--ks2CN4NR",
+                desc: "Descubre un refugio diseñado para la reconexión. Bajo la sombra protectora de un roble centenario, la Cabaña Mandarina ofrece una atmósfera vibrante y serena a la vez.",
+                capacity: "6 Personas",
+                gallery: [
+                    "https://lh3.googleusercontent.com/d/1qq-j2LqJZO4VzsCBttwfVCPUytJWhoaa",
+                    "https://lh3.googleusercontent.com/d/1j7atvLStI06LkeFuQnmtZcnq_O9Kwzcu",
+                    "https://lh3.googleusercontent.com/d/1bUjr4LfaU-v692MJO6StuTrw5Jdilg8N"
+                ]
+            },
+            limon: {
+                name: "Cabaña Limón",
+                tagline: "Vibrante y Energética",
+                concept: "Luz & Naturaleza",
+                color: "text-lime-500",
+                bg: "bg-lime-500",
+                img: "https://lh3.googleusercontent.com/d/1nXvzCi0uV6FUiA-3kGxECRqb63AvSjjX",
+                desc: "Ubicada en el corazón del patio frente a la piscina, la Cabaña Limón es un estallido de luz. Ofrece la mayor conexión visual al frondoso árbol de mamón y a los totumos.",
+                capacity: "6 Personas",
+                gallery: [
+                    "https://lh3.googleusercontent.com/d/1nLTpnbk-chS4hPYDmdHNJ2B361yIafcO",
+                    "https://lh3.googleusercontent.com/d/19jN34E8npsL0iXVYxXIchiOprxFSID0c",
+                    "https://lh3.googleusercontent.com/d/1nXvzCi0uV6FUiA-3kGxECRqb63AvSjjX"
+                ]
+            },
+            toronja: {
+                name: "Cabaña Toronja",
+                tagline: "Elegante y Sofisticada",
+                concept: "Calma & Equilibrio",
+                color: "text-pink-500",
+                bg: "bg-pink-500",
+                img: "https://lh3.googleusercontent.com/d/1RiN3AQFbG-PZ7Laj4-d42iRm5CUsqqiS",
+                desc: "La Cabaña Toronja representa el equilibrio perfecto entre lo rústico y lo moderno. Ideal para familias, su ubicación bajo la sombra del mango la hace idealmente fresca.",
+                capacity: "6 Personas",
+                gallery: [
+                    "https://lh3.googleusercontent.com/d/1I_zkh_L2h13D3ePTJ68Lg-1BKN8mQ7kF",
+                    "https://lh3.googleusercontent.com/d/19S5AHqeo2bSrobaxzNSyWf2RMI8FfFfc",
+                    "https://lh3.googleusercontent.com/d/1RiN3AQFbG-PZ7Laj4-d42iRm5CUsqqiS" 
+                ]
+            },
+            naranja: {
+                name: "Cabaña Naranja",
+                tagline: "Sinfonía de Amor al Atardecer",
+                concept: "Intimidad & Calidez",
+                color: "text-orange-600",
+                bg: "bg-orange-600",
+                img: "https://lh3.googleusercontent.com/d/1uZ7asYph-MnGUseYa_XqJ_TCdKdEmktW",
+                desc: "Construida con la calidez de la madera y orientada para recibir los rayos del hermoso atardecer de ensueño. Ideal para parejas que quieran vivir una sinfonía de amor.",
+                capacity: "2 Personas",
+                gallery: [
+                    "https://lh3.googleusercontent.com/d/1M5oV2AgChxVXAms4EPiTzqIHecCkAixb",
+                    "https://lh3.googleusercontent.com/d/10B7CbyjOHPcHjr_M2HDyx62MhLWZkhMu",
+                    "https://lh3.googleusercontent.com/d/1uZ7asYph-MnGUseYa_XqJ_TCdKdEmktW"
+                ]
+            }
+        };
+
+        function showView(viewId) {
+            document.querySelectorAll('.view-section').forEach(v => {
+                v.classList.remove('active');
+                v.style.display = 'none';
+            });
+            const view = document.getElementById(viewId + '-view');
+            if (view) {
+                view.style.display = 'block';
+                setTimeout(() => view.classList.add('active'), 10);
+            }
+            window.scrollTo(0, 0);
+        }
+
+        function showCabin(id) {
+            const data = cabinData[id];
+            const content = `
+                <header class="h-[70vh] flex flex-col justify-end p-8 text-white relative bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('${data.img}')">
+                    <button onclick="showView('home')" class="absolute top-10 left-6 bg-white/20 backdrop-blur-md p-4 rounded-full text-white hover:bg-white hover:text-black transition-all">
+                        <i class="fa-solid fa-chevron-left"></i> Volver
+                    </button>
+                    <div class="max-w-4xl mx-auto w-full text-center animate-in">
+                        <span class="${data.color} font-bold uppercase tracking-[0.3em] text-[10px] mb-2 block text-center">Refugio Cítrico</span>
+                        <h1 class="text-5xl md:text-7xl font-bold mb-2 leading-tight drop-shadow-lg text-white text-center">${data.name}</h1>
+                        <p class="text-white/90 italic font-light tracking-wide text-lg text-white text-center">"${data.tagline}"</p>
+                    </div>
+                </header>
+
+                <div class="max-w-4xl mx-auto px-6 -mt-16 relative z-10 text-center">
+                    <div class="bg-white rounded-[3rem] p-10 custom-shadow border border-gray-100 mb-16">
+                        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                            <div class="text-center md:text-left flex-1">
+                                <div class="flex items-center gap-3 mb-6 justify-center md:justify-start">
+                                    <div class="w-12 h-1 ${data.bg} rounded-full"></div>
+                                    <span class="text-[10px] font-black uppercase tracking-widest ${data.color}">${data.concept}</span>
+                                </div>
+                                <p class="text-gray-700 leading-relaxed font-light text-lg italic text-center">
+                                    ${data.desc}
+                                </p>
+                            </div>
+                            <div class="bg-gray-50 px-8 py-6 rounded-[2rem] border border-gray-100 text-center shrink-0">
+                                <span class="block text-4xl font-bold text-[#2B4C0B]">${data.capacity.split(' ')[0]}</span>
+                                <span class="text-[10px] uppercase font-black text-gray-400">Huéspedes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-3xl font-bold mb-10 text-[#2B4C0B] flex items-center gap-6 justify-center text-center">
+                        Galería del Refugio
+                        <div class="flex-grow h-px bg-gray-200"></div>
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20 text-center">
+                        <div class="md:col-span-2 rounded-[3rem] overflow-hidden h-96 shadow-xl text-center">
+                            <img src="${data.gallery[0]}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="rounded-[3rem] overflow-hidden h-64 shadow-lg text-center">
+                            <img src="${data.gallery[1]}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="rounded-[3rem] overflow-hidden h-64 shadow-lg text-center">
+                            <img src="${data.gallery[2]}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <a href="https://wa.me/573107076066?text=Hola! Me interesa reservar la ${data.name}" target="_blank" class="${data.bg} text-white px-12 py-6 rounded-full font-bold shadow-2xl hover:scale-105 transition-all uppercase tracking-widest text-sm inline-block">
+                            Reservar ${data.name}
+                        </a>
+                    </div>
+                </div>
+            `;
+            document.getElementById('cabin-content').innerHTML = content;
+            showView('detail');
+        }
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            const links = document.getElementById('nav-links');
+            if (window.scrollY > 80) {
+                navbar.classList.add('nav-scrolled');
+                links.classList.replace('text-white', 'text-[#2B4C0B]');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+                links.classList.replace('text-[#2B4C0B]', 'text-white');
+            }
+        });
+    </script>
+</body>
+</html>
