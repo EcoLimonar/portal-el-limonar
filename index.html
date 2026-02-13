@@ -132,7 +132,7 @@
     <main id="home-view" class="view-section active">
         <!-- Hero Section -->
         <section id="hero" class="hero-main h-screen flex flex-col items-center justify-center text-white p-6 relative">
-            <div class="relative z-10 text-center max-w-4xl animate-in">
+            <div class="relative z-10 text-center max-w-4xl animate-in text-center">
                 <img src="https://lh3.googleusercontent.com/d/1LNTkboFIGhJdPeAVw-08ffqZQP3cqIHm" alt="Logo Hero" class="w-64 md:w-80 mx-auto mb-10 logo-hero">
                 <h1 class="text-2xl md:text-4xl font-bold mb-6 tracking-widest drop-shadow-2xl leading-tight text-center">
                     Donde el Lujo se encuentra con <br> <span class="text-[#F4FF81] italic">lo Natural</span>
@@ -141,7 +141,7 @@
             </div>
         </section>
 
-        <!-- Sección Experiencias -->
+        <!-- Sección Experiencias - Descripciones Parejas y Detalladas -->
         <section id="esencia" class="py-24 px-6 bg-white">
             <div class="max-w-7xl mx-auto">
                 <div class="mb-20 text-center">
@@ -149,35 +149,39 @@
                     <h2 class="text-4xl md:text-6xl font-bold text-[#2B4C0B] text-center">Experiencias El Limonar</h2>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="experience-card bg-[#FAFAF2] rounded-[3rem] overflow-hidden shadow-2xl flex flex-col text-center">
+                    <!-- Experiencia 1 -->
+                    <div class="experience-card bg-[#FAFAF2] rounded-[3rem] overflow-hidden shadow-2xl flex flex-col h-full text-center">
                         <div class="h-64 overflow-hidden"><img src="https://lh3.googleusercontent.com/d/1Sl7_Wk_iiwF1_xOABTLz_Flpsaz5RDYE" class="w-full h-full object-cover transition-transform duration-1000" alt="Cocina"></div>
-                        <div class="p-8">
+                        <div class="p-8 flex flex-col flex-grow">
                             <h3 class="text-xl font-bold mb-4">La Cocina de la Abuela</h3>
-                            <p class="text-gray-500 italic text-xs mb-8">Alimentación Km 0 de la finca a la mesa.</p>
+                            <p class="text-gray-500 italic text-[14px] mb-8 flex-grow leading-relaxed">Sabores auténticos que nacen de nuestra tierra. Ingredientes orgánicos cosechados en la finca, preparados con el amor y el secreto de la tradición familiar. Una experiencia Km 0 que nutre el alma.</p>
                             <a href="https://ecolimonar.github.io/la_cocina_de_la_abuela.html/" target="_blank" class="w-full block bg-[#2B4C0B] text-white py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-verde-vibrante transition-all text-center">Ver Bitácora</a>
                         </div>
                     </div>
-                    <div class="experience-card bg-[#FAFAF2] rounded-[3rem] overflow-hidden shadow-2xl flex flex-col text-center">
+                    <!-- Experiencia 2 (Rosita) -->
+                    <div class="experience-card bg-[#FAFAF2] rounded-[3rem] overflow-hidden shadow-2xl flex flex-col h-full text-center">
                         <div class="h-64 overflow-hidden"><img src="https://lh3.googleusercontent.com/d/1DHzFmNrPyujZU3y6D2H8v1qSTJC8Z6dz" class="w-full h-full object-cover transition-transform duration-1000" alt="Biodiversidad"></div>
-                        <div class="p-8">
+                        <div class="p-8 flex flex-col flex-grow">
                             <h3 class="text-xl font-bold mb-4">Bitácora Natural</h3>
-                            <p class="text-gray-500 italic text-xs mb-8">Biodiversidad del Bosque Seco Tropical.</p>
+                            <p class="text-gray-500 italic text-[14px] mb-8 flex-grow leading-relaxed">Conoce a Rosita, nuestra Lorita Real, y sumérgete en el corazón del Bosque Seco Tropical. Una expedición visual por la fauna y flora que hacen de este refugio un santuario vibrante de biodiversidad.</p>
                             <a href="https://ecolimonar.github.io/poster_bio_limonar.html/" target="_blank" class="w-full block bg-[#2B4C0B] text-white py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-verde-vibrante transition-all text-center">Explorar</a>
                         </div>
                     </div>
-                    <div class="experience-card bg-amber-50 rounded-[3rem] overflow-hidden shadow-2xl flex flex-col text-center">
+                    <!-- Experiencia 3 -->
+                    <div class="experience-card bg-amber-50 rounded-[3rem] overflow-hidden shadow-2xl flex flex-col h-full text-center">
                         <div class="h-64 overflow-hidden"><img src="https://lh3.googleusercontent.com/d/1JUI1g0jXAtH1lzrSCYey_EiRpcYYNPb2" class="w-full h-full object-cover transition-transform duration-1000" alt="Yoga"></div>
-                        <div class="p-8">
+                        <div class="p-8 flex flex-col flex-grow text-center">
                             <h3 class="text-xl font-bold mb-4 text-amber-800">LEE Kuintro Efect</h3>
-                            <p class="text-amber-900/60 italic text-xs mb-8">Yoga, meditación y conexión.</p>
+                            <p class="text-amber-900/60 italic text-[14px] mb-8 flex-grow leading-relaxed">Sintoniza con los cinco elementos. Espacios diseñados para el bienestar integral donde el yoga, la meditación y el efecto Kuintro te guían hacia una reconexión profunda con tu ser y el entorno natural.</p>
                             <a href="https://ecolimonar.github.io/lee_kuintro_efect.html/" target="_blank" class="w-full block bg-amber-600 text-white py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-amber-700 transition-all text-center">Ver Experiencia</a>
                         </div>
                     </div>
-                    <div class="experience-card bg-green-50 rounded-[3rem] overflow-hidden shadow-2xl flex flex-col text-center">
+                    <!-- Experiencia 4 -->
+                    <div class="experience-card bg-green-50 rounded-[3rem] overflow-hidden shadow-2xl flex flex-col h-full text-center">
                         <div class="h-64 overflow-hidden"><img src="https://lh3.googleusercontent.com/d/166SgU9iGfjKo_UbtKmWuSEsVBlxB8OQw" class="w-full h-full object-cover transition-transform duration-1000" alt="Eco-Living Home"></div>
-                        <div class="p-8">
+                        <div class="p-8 flex flex-col flex-grow text-center">
                             <h3 class="text-xl font-bold mb-4 text-green-900">Mundo Eco-Living</h3>
-                            <p class="text-green-900/60 italic text-xs mb-8">Piscina, Lago y Senderos Naturales.</p>
+                            <p class="text-green-900/60 italic text-[14px] mb-8 flex-grow leading-relaxed">El arte de vivir en armonía. Desde la calma de nuestro lago hasta la energía de los senderos y el frescor de la piscina, cada rincón invita a celebrar la plenitud del entorno en los Montes de María.</p>
                             <button onclick="showEcoLiving()" class="w-full bg-green-700 text-white py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-green-800 transition-all text-center">Descubrir Esencia</button>
                         </div>
                     </div>
@@ -203,7 +207,7 @@
                         <div class="text-[11px] font-black text-[#2B4C0B] uppercase">Ver Detalles <i class="fa-solid fa-arrow-right-long ml-2"></i></div>
                     </div>
                     <div class="cabin-card bg-white rounded-[3rem] p-8 shadow-xl transition-all cursor-pointer group text-center" onclick="showCabin('limon')">
-                        <div class="h-48 w-full mb-8 rounded-[2rem] overflow-hidden relative">
+                        <div class="h-48 w-full mb-8 rounded-[2rem] overflow-hidden relative text-center">
                             <img src="https://lh3.googleusercontent.com/d/1nXvzCi0uV6FUiA-3kGxECRqb63AvSjjX" class="w-full h-full object-cover group-hover:scale-110 transition-all text-center">
                             <div class="absolute bottom-4 right-4 bg-lime-500 text-white px-3 py-1 rounded-full text-[9px] font-black uppercase text-center">Cap. 6</div>
                         </div>
@@ -212,7 +216,7 @@
                         <div class="text-[11px] font-black text-[#2B4C0B] uppercase">Ver Detalles <i class="fa-solid fa-arrow-right-long ml-2"></i></div>
                     </div>
                     <div class="cabin-card bg-white rounded-[3rem] p-8 shadow-xl transition-all cursor-pointer group text-center" onclick="showCabin('toronja')">
-                        <div class="h-48 w-full mb-8 rounded-[2rem] overflow-hidden relative">
+                        <div class="h-48 w-full mb-8 rounded-[2rem] overflow-hidden relative text-center">
                             <img src="https://lh3.googleusercontent.com/d/1RiN3AQFbG-PZ7Laj4-d42iRm5CUsqqiS" class="w-full h-full object-cover group-hover:scale-110 transition-all text-center">
                             <div class="absolute bottom-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-[9px] font-black uppercase text-center">Cap. 6</div>
                         </div>
@@ -221,7 +225,7 @@
                         <div class="text-[11px] font-black text-[#2B4C0B] uppercase">Ver Detalles <i class="fa-solid fa-arrow-right-long ml-2"></i></div>
                     </div>
                     <div class="cabin-card bg-white rounded-[3rem] p-8 shadow-xl transition-all cursor-pointer group text-center" onclick="showCabin('naranja')">
-                        <div class="h-48 w-full mb-8 rounded-[2rem] overflow-hidden relative">
+                        <div class="h-48 w-full mb-8 rounded-[2rem] overflow-hidden relative text-center">
                             <img src="https://lh3.googleusercontent.com/d/1uZ7asYph-MnGUseYa_XqJ_TCdKdEmktW" class="w-full h-full object-cover group-hover:scale-110 transition-all text-center">
                             <div class="absolute bottom-4 right-4 bg-orange-600 text-white px-3 py-1 rounded-full text-[9px] font-black uppercase text-center">Cap. 2</div>
                         </div>
@@ -236,7 +240,7 @@
 
     <!-- VISTA DETALLE -->
     <main id="detail-view" class="view-section">
-        <div id="dynamic-content" class="min-h-screen pb-20"></div>
+        <div id="dynamic-content" class="min-h-screen pb-20 text-center"></div>
     </main>
 
     <!-- Footer -->
@@ -259,10 +263,10 @@
                             <i class="fa-brands fa-whatsapp text-2xl"></i><span class="text-sm font-bold tracking-widest">3107076066</span>
                         </a>
                         <a href="https://instagram.com/limonarecohotel" target="_blank" class="flex items-center gap-4 hover:text-verde-vibrante transition-colors text-center">
-                            <i class="fa-brands fa-instagram text-2xl"></i><span class="text-sm font-bold tracking-widest">@limonarecohotel</span>
+                            <i class="fa-brands fa-instagram text-2xl"></i><span class="text-sm font-bold tracking-widest text-center">@limonarecohotel</span>
                         </a>
                         <a href="https://www.facebook.com/limonarecohotel" target="_blank" class="flex items-center gap-4 hover:text-verde-vibrante transition-colors text-center">
-                            <i class="fa-brands fa-facebook text-2xl"></i><span class="text-sm font-bold tracking-widest uppercase">Limonar Eco Hotel</span>
+                            <i class="fa-brands fa-facebook text-2xl"></i><span class="text-sm font-bold tracking-widest uppercase text-center">Limónar Eco Hotel</span>
                         </a>
                     </div>
                 </div>
@@ -431,7 +435,7 @@
                     <div class="bg-white rounded-[3rem] p-10 shadow-2xl mb-16 text-center">
                         <div class="flex flex-col md:flex-row justify-between items-center gap-8 text-center">
                             <div class="text-center md:text-left flex-1">
-                                <div class="flex items-center gap-3 mb-6 justify-center md:justify-start">
+                                <div class="flex items-center gap-3 mb-6 justify-center md:justify-start text-center">
                                     <div class="w-12 h-1 ${data.bg} rounded-full"></div>
                                     <span class="text-[10px] font-black uppercase tracking-widest ${data.color}">${data.concept}</span>
                                 </div>
@@ -444,7 +448,7 @@
                         </div>
                     </div>
 
-                    <h2 class="text-3xl font-bold mb-10 text-[#2B4C0B] flex items-center gap-6 text-center">Galería del Refugio <div class="flex-grow h-px bg-gray-200"></div></h2>
+                    <h2 class="text-3xl font-bold mb-10 text-[#2B4C0B] flex items-center gap-6 text-center justify-center">Galería del Refugio <div class="flex-grow h-px bg-gray-200"></div></h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 text-center">
                         <div class="md:col-span-2 rounded-[3rem] overflow-hidden h-96 shadow-xl cursor-zoom-in text-center" onclick="openLightbox('${data.gallery[0]}')">
                             <img src="${data.gallery[0]}" class="w-full h-full object-cover hover:scale-105 transition-all text-center">
@@ -457,30 +461,29 @@
                         </div>
                     </div>
 
-                    <!-- Comodidades después de la Galería -->
-                    <div class="bg-[#F2F2E6] p-10 rounded-[3rem] border border-gray-200 mb-16 text-center">
-                        <h3 class="text-xl font-bold mb-10 text-center uppercase tracking-widest text-[#2B4C0B]">Comodidades Incluidas</h3>
-                        <div class="grid grid-cols-2 ${data.hasKitchen ? 'md:grid-cols-5' : 'md:grid-cols-4'} gap-8 text-center">
+                    <div class="bg-[#F2F2E6] p-10 rounded-[3rem] border border-gray-200 mb-16 text-center text-center">
+                        <h3 class="text-xl font-bold mb-10 text-center uppercase tracking-widest text-[#2B4C0B] text-center">Comodidades Incluidas</h3>
+                        <div class="grid grid-cols-2 ${data.hasKitchen ? 'md:grid-cols-5' : 'md:grid-cols-4'} gap-8 text-center justify-center">
                             <div class="flex flex-col items-center gap-4 text-center">
-                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-shower text-2xl"></i></div>
-                                <span class="text-xs font-bold uppercase tracking-widest">Baño Interno</span>
+                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-shower text-2xl text-center"></i></div>
+                                <span class="text-xs font-bold uppercase tracking-widest text-center">Baño Interno</span>
                             </div>
                             <div class="flex flex-col items-center gap-4 text-center">
-                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-wind text-2xl"></i></div>
-                                <span class="text-xs font-bold uppercase tracking-widest">Aire Acond.</span>
+                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-wind text-2xl text-center"></i></div>
+                                <span class="text-xs font-bold uppercase tracking-widest text-center">Aire Acond.</span>
                             </div>
                             <div class="flex flex-col items-center gap-4 text-center">
-                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-snowflake text-2xl"></i></div>
-                                <span class="text-xs font-bold uppercase tracking-widest">Nevera</span>
+                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-snowflake text-2xl text-center"></i></div>
+                                <span class="text-xs font-bold uppercase tracking-widest text-center">Nevera</span>
                             </div>
                             <div class="flex flex-col items-center gap-4 text-center">
-                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-leaf text-2xl"></i></div>
-                                <span class="text-xs font-bold uppercase tracking-widest">Balcón con Hamaca</span>
+                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-leaf text-2xl text-center"></i></div>
+                                <span class="text-xs font-bold uppercase tracking-widest text-center">Balcón con Hamaca</span>
                             </div>
                             ${data.hasKitchen ? `
                             <div class="flex flex-col items-center gap-4 text-center">
-                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-utensils text-2xl"></i></div>
-                                <span class="text-xs font-bold uppercase tracking-widest">Cocina</span>
+                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-utensils text-2xl text-center"></i></div>
+                                <span class="text-xs font-bold uppercase tracking-widest text-center">Cocina</span>
                             </div>
                             ` : ''}
                         </div>
