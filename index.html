@@ -73,7 +73,6 @@
             padding: 20px;
         }
 
-        /* Estilos para el Modal Legal */
         #legal-modal {
             display: none;
             position: fixed;
@@ -106,9 +105,27 @@
         }
         .eco-amenity-card img { transition: transform 0.6s ease; }
         .eco-amenity-card:hover img { transform: scale(1.1); }
+
+        /* Efecto de pulso para el botón flotante móvil */
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(124, 179, 66, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(124, 179, 66, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(124, 179, 66, 0); }
+        }
+        .btn-floating-mobile {
+            animation: pulse-green 2s infinite;
+        }
     </style>
 </head>
 <body class="text-center overflow-x-hidden">
+
+    <!-- BOTÓN FLOTANTE MÓVIL (WhatsApp Reservas) -->
+    <a href="https://wa.me/573107076066?text=Hola!%20Vengo%20desde%20su%20página%20web%20y%20me%20gustaría%20solicitar%20información%20sobre%20reservas." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="md:hidden fixed bottom-6 right-6 z-[100] bg-[#7CB342] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl btn-floating-mobile transition-transform active:scale-90">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
 
     <!-- Modal Lightbox Imágenes -->
     <div id="gallery-modal" onclick="closeLightbox()">
@@ -150,6 +167,9 @@
                 <a href="#hero" class="hover:text-amarillo-citrico transition-colors" onclick="showView('home')">Inicio</a>
                 <a href="#esencia" class="hover:text-amarillo-citrico transition-colors" onclick="showView('home')">Esencia</a>
                 <a href="#hospedaje" class="hover:text-amarillo-citrico transition-colors" onclick="showView('home')">Refugios</a>
+                <!-- INTEGRACIÓN ECO-CRÓNICAS ESCRITORIO -->
+                <a href="https://ecolimonar.github.io/eco-papagayos/" target="_blank" rel="noopener noreferrer" class="hover:text-amarillo-citrico transition-colors">Eco-Crónicas</a>
+                
                 <a href="https://wa.me/573107076066" target="_blank" class="bg-white text-[#2B4C0B] px-8 py-3 rounded-full hover:bg-amarillo-citrico transition-all shadow-lg font-bold">RESERVAR</a>
             </div>
 
@@ -168,6 +188,9 @@
         <a href="#hero" class="text-white text-xl font-bold tracking-widest uppercase" onclick="toggleMenu(); showView('home')">Inicio</a>
         <a href="#esencia" class="text-white text-xl font-bold tracking-widest uppercase" onclick="toggleMenu(); showView('home')">Esencia</a>
         <a href="#hospedaje" class="text-white text-xl font-bold tracking-widest uppercase" onclick="toggleMenu(); showView('home')">Refugios</a>
+        <!-- INTEGRACIÓN ECO-CRÓNICAS MÓVIL -->
+        <a href="https://ecolimonar.github.io/eco-papagayos/" target="_blank" rel="noopener noreferrer" class="text-white text-xl font-bold tracking-widest uppercase" onclick="toggleMenu()">Eco-Crónicas</a>
+        
         <div class="w-20 h-0.5 bg-white/20 my-4"></div>
         <a href="https://wa.me/573107076066" target="_blank" class="bg-amarillo-citrico text-[#2B4C0B] w-full py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-xl text-center">RESERVAR AHORA</a>
     </div>
@@ -233,15 +256,35 @@
             </div>
         </section>
 
+        <!-- SECCIÓN REVISTA DIGITAL CTA (INTEGRACIÓN ESTRATÉGICA) -->
+        <section class="py-16 bg-[#F2F2E6] border-t border-gray-100">
+            <div class="max-w-4xl mx-auto px-6">
+                <div style="text-align: center;">
+                    <span class="text-verde-vibrante font-black tracking-[0.4em] uppercase text-[10px] mb-4 block">Nuestra Bitácora Digital</span>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-8 text-[#2B4C0B]">Descubre las historias de nuestra tierra en Eco-Crónicas</h3>
+                    <p class="text-gray-600 italic mb-10 max-w-2xl mx-auto leading-relaxed">
+                        Explora el primer volumen de nuestra revista: "13 años sembrando vida". Un viaje visual por la resiliencia y el legado de El Limonar.
+                    </p>
+                    
+                    <a href="https://ecolimonar.github.io/eco-papagayos/" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       style="display: inline-block; background-color: #2B4C0B; color: #FAFAF2; padding: 18px 45px; border-radius: 50px; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; text-decoration: none; box-shadow: 0 15px 35px rgba(43, 76, 11, 0.2); transition: all 0.3s ease;">
+                        <i class="fa-solid fa-book-open mr-2"></i> Leer Eco-Crónicas Vol. 01
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- Sección Refugios -->
-        <section id="hospedaje" class="py-24 bg-[#F2F2E6] border-y border-gray-200">
+        <section id="hospedaje" class="py-24 bg-white">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="mb-20 text-center">
                     <span class="text-verde-vibrante font-black tracking-[0.5em] uppercase text-xs mb-4 block">El Equilibrio del Cuatro</span>
                     <h2 class="text-4xl md:text-6xl font-bold text-[#2B4C0B] text-center">Refugios Cítricos</h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                    <div class="cabin-card bg-white rounded-[3rem] p-8 shadow-xl transition-all cursor-pointer group text-center" onclick="showCabin('mandarina')">
+                    <div class="cabin-card bg-[#FAFAF2] rounded-[3rem] p-8 shadow-xl transition-all cursor-pointer group text-center" onclick="showCabin('mandarina')">
                         <div class="h-48 w-full mb-8 rounded-[2rem] overflow-hidden relative">
                             <img src="https://lh3.googleusercontent.com/d/1JK0Vn6vUJZfh_rLVABtzsd--ks2CN4NR" class="w-full h-full object-cover group-hover:scale-110 transition-all text-center">
                             <div class="absolute bottom-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-[9px] font-black uppercase text-center">Cap. 6</div>
@@ -250,7 +293,7 @@
                         <p class="text-[10px] uppercase font-black text-gray-400 mb-6 italic">Equilibrio & Estabilidad</p>
                         <div class="text-[11px] font-black text-[#2B4C0B] uppercase">Ver Detalles <i class="fa-solid fa-arrow-right-long ml-2"></i></div>
                     </div>
-                    <div class="cabin-card bg-white rounded-[3rem] p-8 shadow-xl transition-all cursor-pointer group text-center" onclick="showCabin('limon')">
+                    <div class="cabin-card bg-[#FAFAF2] rounded-[3rem] p-8 shadow-xl transition-all cursor-pointer group text-center" onclick="showCabin('limon')">
                         <div class="h-48 w-full mb-8 rounded-[2rem] overflow-hidden relative text-center">
                             <img src="https://lh3.googleusercontent.com/d/1nXvzCi0uV6FUiA-3kGxECRqb63AvSjjX" class="w-full h-full object-cover group-hover:scale-110 transition-all text-center">
                             <div class="absolute bottom-4 right-4 bg-lime-500 text-white px-3 py-1 rounded-full text-[9px] font-black uppercase text-center">Cap. 6</div>
@@ -259,7 +302,7 @@
                         <p class="text-[10px] uppercase font-black text-gray-400 mb-6 italic">Luz & Energía</p>
                         <div class="text-[11px] font-black text-[#2B4C0B] uppercase">Ver Detalles <i class="fa-solid fa-arrow-right-long ml-2"></i></div>
                     </div>
-                    <div class="cabin-card bg-white rounded-[3rem] p-8 shadow-xl transition-all cursor-pointer group text-center" onclick="showCabin('toronja')">
+                    <div class="cabin-card bg-[#FAFAF2] rounded-[3rem] p-8 shadow-xl transition-all cursor-pointer group text-center" onclick="showCabin('toronja')">
                         <div class="h-48 w-full mb-8 rounded-[2rem] overflow-hidden relative text-center">
                             <img src="https://lh3.googleusercontent.com/d/1RiN3AQFbG-PZ7Laj4-d42iRm5CUsqqiS" class="w-full h-full object-cover group-hover:scale-110 transition-all text-center">
                             <div class="absolute bottom-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-[9px] font-black uppercase text-center">Cap. 6</div>
@@ -268,7 +311,7 @@
                         <p class="text-[10px] uppercase font-black text-gray-400 mb-6 italic">Calma & Distinción</p>
                         <div class="text-[11px] font-black text-[#2B4C0B] uppercase">Ver Detalles <i class="fa-solid fa-arrow-right-long ml-2"></i></div>
                     </div>
-                    <div class="cabin-card bg-white rounded-[3rem] p-8 shadow-xl transition-all cursor-pointer group text-center" onclick="showCabin('naranja')">
+                    <div class="cabin-card bg-[#FAFAF2] rounded-[3rem] p-8 shadow-xl transition-all cursor-pointer group text-center" onclick="showCabin('naranja')">
                         <div class="h-48 w-full mb-8 rounded-[2rem] overflow-hidden relative text-center">
                             <img src="https://lh3.googleusercontent.com/d/1oQp0_9qXKiYCxMJxOE_rEF5RkGXf2kX6" class="w-full h-full object-cover group-hover:scale-110 transition-all text-center">
                             <div class="absolute bottom-4 right-4 bg-orange-600 text-white px-3 py-1 rounded-full text-[9px] font-black uppercase text-center">Cap. 2</div>
@@ -452,7 +495,6 @@
                                 <p class="text-sm opacity-80 italic leading-relaxed text-center">Arquitectura orgánica en palma y madera. El punto de encuentro para compartir historias y la brisa fresca de la sabana.</p>
                             </div>
                         </div>
-                        <!-- Jardines Cítricos -->
                         <div class="eco-amenity-card">
                             <div class="h-64 overflow-hidden relative text-center">
                                 <img src="https://lh3.googleusercontent.com/d/1s3fquaCsMI3D_6TzAAITChLEgPsIHc_V" alt="Jardines" class="w-full h-full object-cover text-center">
@@ -463,7 +505,6 @@
                                 <p class="text-sm opacity-80 leading-relaxed text-center">Camina entre limoneros, naranjos y flores nativas. Un festín sensorial de aromas que purifican el alma y el espíritu.</p>
                             </div>
                         </div>
-                        <!-- Senderos de Reconexión -->
                         <div class="eco-amenity-card md:col-span-2">
                             <div class="h-64 overflow-hidden relative text-center">
                                 <img src="https://lh3.googleusercontent.com/d/1jpzTT2UWclTwQh5A2F_jYKnVSAaOokr-" alt="Senderos" class="w-full h-full object-cover object-top text-center">
@@ -495,10 +536,10 @@
                     </div>
                 </header>
 
-                <div class="max-w-4xl mx-auto px-6 -mt-16 relative z-10 text-center text-center">
-                    <div class="bg-white rounded-[3rem] p-10 shadow-2xl mb-16 text-center text-center text-center">
-                        <div class="flex flex-col md:flex-row justify-between items-center gap-8 text-center text-center">
-                            <div class="text-center md:text-left flex-1 text-center md:text-left">
+                <div class="max-w-4xl mx-auto px-6 -mt-16 relative z-10 text-center">
+                    <div class="bg-white rounded-[3rem] p-10 shadow-2xl mb-16">
+                        <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                            <div class="text-center md:text-left flex-1">
                                 <div class="flex items-center gap-3 mb-6 justify-center md:justify-start">
                                     <div class="w-12 h-1 ${data.bg} rounded-full"></div>
                                     <span class="text-[10px] font-black uppercase tracking-widest ${data.color}">${data.concept}</span>
@@ -512,41 +553,41 @@
                         </div>
                     </div>
 
-                    <h2 class="text-3xl font-bold mb-10 text-[#2B4C0B] flex items-center gap-6 text-center justify-center">Galería del Refugio <div class="flex-grow h-px bg-gray-200 text-center"></div></h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 text-center">
-                        <div class="md:col-span-2 rounded-[3rem] overflow-hidden h-96 shadow-xl cursor-zoom-in text-center text-center text-center text-center" onclick="openLightbox('${data.gallery[0]}')">
+                    <h2 class="text-3xl font-bold mb-10 text-[#2B4C0B] flex items-center gap-6 justify-center">Galería del Refugio <div class="flex-grow h-px bg-gray-200"></div></h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+                        <div class="md:col-span-2 rounded-[3rem] overflow-hidden h-96 shadow-xl cursor-zoom-in" onclick="openLightbox('${data.gallery[0]}')">
                             <img src="${data.gallery[0]}" class="w-full h-full object-cover hover:scale-105 transition-all">
                         </div>
-                        <div class="rounded-[3rem] overflow-hidden h-64 shadow-lg cursor-zoom-in text-center text-center" onclick="openLightbox('${data.gallery[1]}')">
+                        <div class="rounded-[3rem] overflow-hidden h-64 shadow-lg cursor-zoom-in" onclick="openLightbox('${data.gallery[1]}')">
                             <img src="${data.gallery[1]}" class="w-full h-full object-cover hover:scale-105 transition-all">
                         </div>
-                        <div class="rounded-[3rem] overflow-hidden h-64 shadow-lg cursor-zoom-in text-center text-center text-center" onclick="openLightbox('${data.gallery[2]}')">
+                        <div class="rounded-[3rem] overflow-hidden h-64 shadow-lg cursor-zoom-in" onclick="openLightbox('${data.gallery[2]}')">
                             <img src="${data.gallery[2]}" class="w-full h-full object-cover hover:scale-105 transition-all">
                         </div>
                     </div>
 
-                    <div class="bg-[#F2F2E6] p-10 rounded-[3rem] border border-gray-200 mb-16 text-center text-center">
+                    <div class="bg-[#F2F2E6] p-10 rounded-[3rem] border border-gray-100 mb-16">
                         <h3 class="text-xl font-bold mb-10 text-center uppercase tracking-widest text-[#2B4C0B]">Comodidades Incluidas</h3>
-                        <div class="grid grid-cols-2 ${data.hasKitchen ? 'md:grid-cols-5' : 'md:grid-cols-4'} gap-8 text-center justify-center">
-                            <div class="flex flex-col items-center gap-4 text-center">
+                        <div class="grid grid-cols-2 ${data.hasKitchen ? 'md:grid-cols-5' : 'md:grid-cols-4'} gap-8">
+                            <div class="flex flex-col items-center gap-4">
                                 <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-shower text-2xl"></i></div>
                                 <span class="text-xs font-bold uppercase tracking-widest">Baño Interno</span>
                             </div>
-                            <div class="flex flex-col items-center gap-4 text-center">
-                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-wind text-2xl text-center"></i></div>
+                            <div class="flex flex-col items-center gap-4">
+                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-wind text-2xl"></i></div>
                                 <span class="text-xs font-bold uppercase tracking-widest">Aire Acond.</span>
                             </div>
-                            <div class="flex flex-col items-center gap-4 text-center">
-                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-snowflake text-2xl text-center"></i></div>
+                            <div class="flex flex-col items-center gap-4">
+                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-snowflake text-2xl"></i></div>
                                 <span class="text-xs font-bold uppercase tracking-widest">Nevera</span>
                             </div>
-                            <div class="flex flex-col items-center gap-4 text-center text-center text-center">
-                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-leaf text-2xl text-center"></i></div>
-                                <span class="text-xs font-bold uppercase tracking-widest text-center">Hamaca</span>
+                            <div class="flex flex-col items-center gap-4">
+                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-leaf text-2xl"></i></div>
+                                <span class="text-xs font-bold uppercase tracking-widest">Hamaca</span>
                             </div>
                             ${data.hasKitchen ? `
-                            <div class="flex flex-col items-center gap-4 text-center text-center">
-                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-utensils text-2xl text-center"></i></div>
+                            <div class="flex flex-col items-center gap-4">
+                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-utensils text-2xl"></i></div>
                                 <span class="text-xs font-bold uppercase tracking-widest">Cocina</span>
                             </div>
                             ` : ''}
@@ -554,7 +595,7 @@
                     </div>
                     
                     <div class="text-center">
-                        <a href="https://wa.me/573107076066?text=Me interesa reservar la ${data.name}" target="_blank" class="${data.bg} text-white px-12 py-6 rounded-full font-bold shadow-2xl hover:scale-105 transition-all uppercase tracking-widest text-sm inline-block text-center text-center">Reservar Ahora</a>
+                        <a href="https://wa.me/573107076066?text=Me interesa reservar la ${data.name}" target="_blank" class="${data.bg} text-white px-12 py-6 rounded-full font-bold shadow-2xl hover:scale-105 transition-all uppercase tracking-widest text-sm inline-block">Reservar Ahora</a>
                     </div>
                 </div>
             `;
