@@ -110,11 +110,6 @@
 </head>
 <body class="text-center overflow-x-hidden">
 
-    <!-- Botón de Reservas Flotante (Solo Móvil) -->
-    <a href="https://wa.me/573107076066" target="_blank" class="md:hidden fixed bottom-6 right-6 z-40 bg-[#2B4C0B] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-transform active:scale-90 border-2 border-white/20">
-        <i class="fa-brands fa-whatsapp text-2xl"></i>
-    </a>
-
     <!-- Modal Lightbox Imágenes -->
     <div id="gallery-modal" onclick="closeLightbox()">
         <img id="modal-img" src="" alt="Zoom" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl text-center">
@@ -228,7 +223,7 @@
                     <!-- Experiencia 4 -->
                     <div class="experience-card bg-green-50 rounded-[3rem] overflow-hidden shadow-2xl flex flex-col h-full text-center">
                         <div class="h-64 overflow-hidden"><img src="https://lh3.googleusercontent.com/d/166SgU9iGfjKo_UbtKmWuSEsVBlxB8OQw" class="w-full h-full object-cover transition-transform duration-1000" alt="Eco-Living Home"></div>
-                        <div class="p-8 flex flex-col flex-grow text-center text-center text-center">
+                        <div class="p-8 flex flex-col flex-grow text-center text-center">
                             <h3 class="text-xl font-bold mb-4 text-green-900">Mundo Eco-Living</h3>
                             <p class="text-green-900/60 italic text-[14px] mb-8 flex-grow leading-relaxed">El arte de vivir en armonía. Desde la calma de nuestro lago hasta la energía de los senderos y el frescor de la piscina, cada rincón invita a celebrar la plenitud del entorno en los Montes de María.</p>
                             <button onclick="showEcoLiving()" class="w-full bg-green-700 text-white py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-green-800 transition-all text-center">Descubrir Esencia</button>
@@ -297,7 +292,7 @@
         <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
             <img src="https://lh3.googleusercontent.com/d/1LNTkboFIGhJdPeAVw-08ffqZQP3cqIHm" alt="Logo Footer" class="w-64 mb-16 opacity-90 drop-shadow-2xl mx-auto">
             
-            <div class="grid md:grid-cols-2 gap-16 mb-20 w-full max-w-4xl text-center text-center text-center">
+            <div class="grid md:grid-cols-2 gap-16 mb-20 w-full max-w-4xl text-center">
                 <div class="text-center">
                     <h4 class="font-black text-xs uppercase tracking-[0.4em] mb-8 text-verde-vibrante text-center">Ubicación</h4>
                     <p class="text-xl font-bold mb-2">Toluviejo, Sucre, Col.</p>
@@ -365,7 +360,7 @@
                 desc: "Construida con la calidez de la madera y orientada para recibir los rayos del hermoso atardecer de ensueño. Ideal para parejas que quieran vivir una sinfonía de amor.",
                 capacity: "2 Personas",
                 hasKitchen: false,
-                gallery: ["https://lh3.googleusercontent.com/d/1oQp0_9qXKiYCxMJxOE_rEF5RkGXf2kX6", "https://lh3.googleusercontent.com/d/10vfiQRAQGESencx02kLx3Msr5cA5Ca4i", "https://lh3.googleusercontent.com/d/1M5oV2AgChxVXAms4EPiTzqIHecCkAixb"]
+                gallery: ["https://lh3.googleusercontent.com/d/1uZ7asYph-MnGUseYa_XqJ_TCdKdEmktW", "https://lh3.googleusercontent.com/d/10vfiQRAQGESencx02kLx3Msr5cA5Ca4i", "https://lh3.googleusercontent.com/d/1M5oV2AgChxVXAms4EPiTzqIHecCkAixb"]
             }
         };
 
@@ -414,14 +409,14 @@
 
         function showEcoLiving() {
             const content = `
-                <header class="h-[60vh] flex flex-col justify-end p-8 text-white relative bg-cover bg-center text-center text-center text-center text-center" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('https://lh3.googleusercontent.com/d/18YVMuaWQDeBBwvtfqxj_0OmRfIcO-i_8')">
+                <header class="h-[60vh] flex flex-col justify-end p-8 text-white relative bg-cover bg-center text-center" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), url('https://lh3.googleusercontent.com/d/18YVMuaWQDeBBwvtfqxj_0OmRfIcO-i_8')">
                     <button onclick="showView('home')" class="absolute top-10 left-6 bg-white/20 backdrop-blur-md p-4 rounded-full text-white hover:bg-white hover:text-black transition-all">
                         <i class="fa-solid fa-chevron-left"></i> Volver
                     </button>
-                    <div class="max-w-4xl mx-auto w-full text-center animate-in text-center text-center text-center text-center text-center">
-                        <span class="text-amarillo-citrico font-bold uppercase tracking-[0.3em] text-[10px] mb-2 block text-center text-center text-center text-center">Experiencia Natural</span>
-                        <h1 class="text-5xl md:text-7xl font-bold mb-4 leading-tight text-center text-center text-center text-center">Mundo Eco-Living</h1>
-                        <p class="text-white/90 italic font-light text-lg text-center text-center text-center text-center">"Sintoniza con el latido de la tierra"</p>
+                    <div class="max-w-4xl mx-auto w-full text-center animate-in text-center">
+                        <span class="text-amarillo-citrico font-bold uppercase tracking-[0.3em] text-[10px] mb-2 block text-center">Experiencia Natural</span>
+                        <h1 class="text-5xl md:text-7xl font-bold mb-4 leading-tight text-center">Mundo Eco-Living</h1>
+                        <p class="text-white/90 italic font-light text-lg text-center">"Sintoniza con el latido de la tierra"</p>
                     </div>
                 </header>
 
@@ -432,29 +427,29 @@
                                 <img src="https://lh3.googleusercontent.com/d/1z8r6g4iCxb5lu3pIyy769rkUSghr_lZ-" alt="Piscina" class="w-full h-full object-cover">
                             </div>
                             <div class="p-8 text-center text-center">
-                                <i class="fa-solid fa-swimming-pool text-3xl mb-4 text-verde-vibrante text-center text-center"></i>
-                                <h3 class="text-2xl font-bold mb-4 text-center text-center">Piscina de Horizonte</h3>
-                                <p class="text-sm opacity-80 italic leading-relaxed text-center text-center">Sumérgete en la serenidad de nuestra piscina de horizonte infinito, donde el azul cristalino se funde con el verde exuberante de los Montes de María.</p>
+                                <i class="fa-solid fa-swimming-pool text-3xl mb-4 text-verde-vibrante"></i>
+                                <h3 class="text-2xl font-bold mb-4 text-center">Piscina de Horizonte</h3>
+                                <p class="text-sm opacity-80 italic leading-relaxed text-center">Sumérgete en la serenidad de nuestra piscina de horizonte infinito, donde el azul cristalino se funde con el verde exuberante de los Montes de María.</p>
                             </div>
                         </div>
                         <div class="eco-amenity-card">
                             <div class="h-64 overflow-hidden relative text-center">
                                 <img src="https://lh3.googleusercontent.com/d/1ds13kEoLYCU_GcMuadDq7qOmwoAqet_b" alt="Lago" class="w-full h-full object-cover">
                             </div>
-                            <div class="p-8 text-center text-center text-center">
-                                <i class="fa-solid fa-water text-3xl mb-4 text-verde-vibrante text-center text-center"></i>
-                                <h3 class="text-2xl font-bold mb-4 text-center text-center">Lago de los Sueños</h3>
-                                <p class="text-sm opacity-80 italic leading-relaxed text-center text-center text-center">Un santuario de quietud. Nuestro lago es un espejo de agua donde la biodiversidad local se manifiesta en su estado más puro.</p>
+                            <div class="p-8 text-center text-center">
+                                <i class="fa-solid fa-water text-3xl mb-4 text-verde-vibrante"></i>
+                                <h3 class="text-2xl font-bold mb-4 text-center">Lago de los Sueños</h3>
+                                <p class="text-sm opacity-80 italic leading-relaxed text-center">Un santuario de quietud. Nuestro lago es un espejo de agua donde la biodiversidad local se manifiesta en su estado más puro.</p>
                             </div>
                         </div>
                         <div class="eco-amenity-card">
                             <div class="h-64 overflow-hidden relative text-center">
                                 <img src="https://lh3.googleusercontent.com/d/1B7OPy48p6VYvehHvxP5RPnd7fDnoK4P4" alt="Kiosko" class="w-full h-full object-cover text-center">
                             </div>
-                            <div class="p-8 text-center text-center text-center text-center text-center">
-                                <i class="fa-solid fa-campground text-3xl mb-4 text-verde-vibrante text-center text-center text-center text-center"></i>
-                                <h3 class="text-2xl font-bold mb-4 text-center text-center text-center text-center">Kiosko Social</h3>
-                                <p class="text-sm opacity-80 italic leading-relaxed text-center text-center text-center text-center text-center">Arquitectura orgánica en palma y madera. El punto de encuentro para compartir historias y la brisa fresca de la sabana.</p>
+                            <div class="p-8 text-center text-center text-center text-center">
+                                <i class="fa-solid fa-campground text-3xl mb-4 text-verde-vibrante"></i>
+                                <h3 class="text-2xl font-bold mb-4 text-center">Kiosko Social</h3>
+                                <p class="text-sm opacity-80 italic leading-relaxed text-center">Arquitectura orgánica en palma y madera. El punto de encuentro para compartir historias y la brisa fresca de la sabana.</p>
                             </div>
                         </div>
                         <!-- Jardines Cítricos -->
@@ -462,21 +457,21 @@
                             <div class="h-64 overflow-hidden relative text-center">
                                 <img src="https://lh3.googleusercontent.com/d/1s3fquaCsMI3D_6TzAAITChLEgPsIHc_V" alt="Jardines" class="w-full h-full object-cover text-center">
                             </div>
-                            <div class="p-8 text-center text-center">
-                                <i class="fa-solid fa-leaf text-3xl mb-4 text-verde-vibrante text-center text-center"></i>
-                                <h3 class="text-2xl font-bold mb-4 text-center text-center">Jardines Cítricos</h3>
-                                <p class="text-sm opacity-80 leading-relaxed text-center text-center text-center">Camina entre limoneros, naranjos y flores nativas. Un festín sensorial de aromas que purifican el alma y el espíritu.</p>
+                            <div class="p-8 text-center">
+                                <i class="fa-solid fa-leaf text-3xl mb-4 text-verde-vibrante text-center"></i>
+                                <h3 class="text-2xl font-bold mb-4 text-center">Jardines Cítricos</h3>
+                                <p class="text-sm opacity-80 leading-relaxed text-center">Camina entre limoneros, naranjos y flores nativas. Un festín sensorial de aromas que purifican el alma y el espíritu.</p>
                             </div>
                         </div>
                         <!-- Senderos de Reconexión -->
-                        <div class="eco-amenity-card md:col-span-2 text-center text-center">
-                            <div class="h-64 overflow-hidden relative text-center text-center">
-                                <img src="https://lh3.googleusercontent.com/d/1jpzTT2UWclTwQh5A2F_jYKnVSAaOokr-" alt="Senderos" class="w-full h-full object-cover object-top text-center text-center">
+                        <div class="eco-amenity-card md:col-span-2">
+                            <div class="h-64 overflow-hidden relative text-center">
+                                <img src="https://lh3.googleusercontent.com/d/1jpzTT2UWclTwQh5A2F_jYKnVSAaOokr-" alt="Senderos" class="w-full h-full object-cover object-top text-center">
                             </div>
-                            <div class="p-8 text-center text-center text-center">
-                                <i class="fa-solid fa-route text-3xl mb-4 text-verde-vibrante text-center text-center text-center"></i>
-                                <h3 class="text-2xl font-bold mb-4 text-center text-center text-center text-center">Senderos de Reconexión</h3>
-                                <p class="text-sm opacity-80 italic leading-relaxed text-center text-center text-center text-center">Entre la finca y el arroyo senderos seguros a través del Bosque Seco Tropical. Descubre la fauna local, escucha el canto de las aves, el aullido de los monos y siente la energía vital de la naturaleza virgen.</p>
+                            <div class="p-8 text-center">
+                                <i class="fa-solid fa-route text-3xl mb-4 text-verde-vibrante text-center"></i>
+                                <h3 class="text-2xl font-bold mb-4 text-center">Senderos de Reconexión</h3>
+                                <p class="text-sm opacity-80 italic leading-relaxed text-center">Entre la finca y el arroyo senderos seguros a través del Bosque Seco Tropical. Descubre la fauna local, escucha el canto de las aves, el aullido de los monos y siente la energía vital de la naturaleza virgen.</p>
                             </div>
                         </div>
                     </div>
@@ -489,77 +484,77 @@
         function showCabin(id) {
             const data = cabinData[id];
             const content = `
-                <header class="h-[70vh] flex flex-col justify-end p-8 text-white relative bg-cover bg-center text-center text-center text-center text-center" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('${data.img}')">
+                <header class="h-[70vh] flex flex-col justify-end p-8 text-white relative bg-cover bg-center text-center" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('${data.img}')">
                     <button onclick="showView('home')" class="absolute top-10 left-6 bg-white/20 backdrop-blur-md p-4 rounded-full text-white hover:bg-white hover:text-black transition-all">
                         <i class="fa-solid fa-chevron-left"></i> Volver
                     </button>
-                    <div class="max-w-4xl mx-auto w-full text-center animate-in text-center text-center text-center text-center text-center">
-                        <span class="${data.color} font-bold uppercase tracking-[0.3em] text-[10px] mb-2 block text-center text-center text-center text-center text-center">Refugio Cítrico</span>
-                        <h1 class="text-5xl md:text-7xl font-bold mb-2 leading-tight drop-shadow-lg text-white text-center text-center text-center text-center text-center">${data.name}</h1>
-                        <p class="text-white/90 italic font-light tracking-wide text-lg text-white text-center text-center text-center text-center text-center">"${data.tagline}"</p>
+                    <div class="max-w-4xl mx-auto w-full text-center animate-in">
+                        <span class="${data.color} font-bold uppercase tracking-[0.3em] text-[10px] mb-2 block text-center">Refugio Cítrico</span>
+                        <h1 class="text-5xl md:text-7xl font-bold mb-2 leading-tight drop-shadow-lg text-white text-center">${data.name}</h1>
+                        <p class="text-white/90 italic font-light tracking-wide text-lg text-white text-center">"${data.tagline}"</p>
                     </div>
                 </header>
 
-                <div class="max-w-4xl mx-auto px-6 -mt-16 relative z-10 text-center text-center text-center text-center text-center">
-                    <div class="bg-white rounded-[3rem] p-10 shadow-2xl mb-16 text-center text-center text-center text-center text-center text-center text-center">
-                        <div class="flex flex-col md:flex-row justify-between items-center gap-8 text-center text-center text-center text-center text-center">
-                            <div class="text-center md:text-left flex-1 text-center md:text-left text-center md:text-left text-center md:text-left">
-                                <div class="flex items-center gap-3 mb-6 justify-center md:justify-start text-center md:justify-start">
+                <div class="max-w-4xl mx-auto px-6 -mt-16 relative z-10 text-center text-center">
+                    <div class="bg-white rounded-[3rem] p-10 shadow-2xl mb-16 text-center text-center text-center">
+                        <div class="flex flex-col md:flex-row justify-between items-center gap-8 text-center text-center">
+                            <div class="text-center md:text-left flex-1 text-center md:text-left">
+                                <div class="flex items-center gap-3 mb-6 justify-center md:justify-start">
                                     <div class="w-12 h-1 ${data.bg} rounded-full"></div>
-                                    <span class="text-[10px] font-black uppercase tracking-widest ${data.color} text-center text-center text-center">${data.concept}</span>
+                                    <span class="text-[10px] font-black uppercase tracking-widest ${data.color}">${data.concept}</span>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed font-light text-lg italic text-center md:text-left text-center md:text-left text-center md:text-left">${data.desc}</p>
+                                <p class="text-gray-700 leading-relaxed font-light text-lg italic text-center md:text-left">${data.desc}</p>
                             </div>
-                            <div class="bg-gray-50 px-8 py-6 rounded-[2rem] border border-gray-100 text-center shrink-0 text-center text-center">
-                                <span class="block text-4xl font-bold text-[#2B4C0B] text-center text-center">${data.capacity.split(' ')[0]}</span>
-                                <span class="text-[10px] uppercase font-black text-gray-400 text-center text-center text-center">Huéspedes</span>
+                            <div class="bg-gray-50 px-8 py-6 rounded-[2rem] border border-gray-100 text-center shrink-0">
+                                <span class="block text-4xl font-bold text-[#2B4C0B]">${data.capacity.split(' ')[0]}</span>
+                                <span class="text-[10px] uppercase font-black text-gray-400">Huéspedes</span>
                             </div>
                         </div>
                     </div>
 
-                    <h2 class="text-3xl font-bold mb-10 text-[#2B4C0B] flex items-center gap-6 text-center justify-center text-center justify-center text-center justify-center">Galería del Refugio <div class="flex-grow h-px bg-gray-200 text-center text-center text-center"></div></h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 text-center text-center text-center text-center">
-                        <div class="md:col-span-2 rounded-[3rem] overflow-hidden h-96 shadow-xl cursor-zoom-in text-center text-center text-center text-center text-center text-center text-center text-center text-center" onclick="openLightbox('${data.gallery[0]}')">
-                            <img src="${data.gallery[0]}" class="w-full h-full object-cover hover:scale-105 transition-all text-center">
+                    <h2 class="text-3xl font-bold mb-10 text-[#2B4C0B] flex items-center gap-6 text-center justify-center">Galería del Refugio <div class="flex-grow h-px bg-gray-200 text-center"></div></h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 text-center">
+                        <div class="md:col-span-2 rounded-[3rem] overflow-hidden h-96 shadow-xl cursor-zoom-in text-center text-center text-center text-center" onclick="openLightbox('${data.gallery[0]}')">
+                            <img src="${data.gallery[0]}" class="w-full h-full object-cover hover:scale-105 transition-all">
                         </div>
-                        <div class="rounded-[3rem] overflow-hidden h-64 shadow-lg cursor-zoom-in text-center text-center text-center text-center" onclick="openLightbox('${data.gallery[1]}')">
-                            <img src="${data.gallery[1]}" class="w-full h-full object-cover hover:scale-105 transition-all text-center">
+                        <div class="rounded-[3rem] overflow-hidden h-64 shadow-lg cursor-zoom-in text-center text-center" onclick="openLightbox('${data.gallery[1]}')">
+                            <img src="${data.gallery[1]}" class="w-full h-full object-cover hover:scale-105 transition-all">
                         </div>
-                        <div class="rounded-[3rem] overflow-hidden h-64 shadow-lg cursor-zoom-in text-center text-center text-center text-center text-center" onclick="openLightbox('${data.gallery[2]}')">
-                            <img src="${data.gallery[2]}" class="w-full h-full object-cover hover:scale-105 transition-all text-center">
+                        <div class="rounded-[3rem] overflow-hidden h-64 shadow-lg cursor-zoom-in text-center text-center text-center" onclick="openLightbox('${data.gallery[2]}')">
+                            <img src="${data.gallery[2]}" class="w-full h-full object-cover hover:scale-105 transition-all">
                         </div>
                     </div>
 
-                    <div class="bg-[#F2F2E6] p-10 rounded-[3rem] border border-gray-200 mb-16 text-center text-center text-center text-center text-center text-center">
-                        <h3 class="text-xl font-bold mb-10 text-center uppercase tracking-widest text-[#2B4C0B] text-center text-center">Comodidades Incluidas</h3>
-                        <div class="grid grid-cols-2 ${data.hasKitchen ? 'md:grid-cols-5' : 'md:grid-cols-4'} gap-8 text-center justify-center text-center justify-center text-center justify-center">
-                            <div class="flex flex-col items-center gap-4 text-center text-center">
-                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color} text-center"><i class="fa-solid fa-shower text-2xl text-center"></i></div>
-                                <span class="text-xs font-bold uppercase tracking-widest text-center text-center text-center">Baño Interno</span>
+                    <div class="bg-[#F2F2E6] p-10 rounded-[3rem] border border-gray-200 mb-16 text-center text-center">
+                        <h3 class="text-xl font-bold mb-10 text-center uppercase tracking-widest text-[#2B4C0B]">Comodidades Incluidas</h3>
+                        <div class="grid grid-cols-2 ${data.hasKitchen ? 'md:grid-cols-5' : 'md:grid-cols-4'} gap-8 text-center justify-center">
+                            <div class="flex flex-col items-center gap-4 text-center">
+                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-shower text-2xl"></i></div>
+                                <span class="text-xs font-bold uppercase tracking-widest">Baño Interno</span>
                             </div>
-                            <div class="flex flex-col items-center gap-4 text-center text-center">
-                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color} text-center text-center"><i class="fa-solid fa-wind text-2xl text-center text-center"></i></div>
-                                <span class="text-xs font-bold uppercase tracking-widest text-center text-center text-center">Aire Acond.</span>
+                            <div class="flex flex-col items-center gap-4 text-center">
+                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-wind text-2xl text-center"></i></div>
+                                <span class="text-xs font-bold uppercase tracking-widest">Aire Acond.</span>
                             </div>
-                            <div class="flex flex-col items-center gap-4 text-center text-center">
-                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color} text-center text-center text-center"><i class="fa-solid fa-snowflake text-2xl text-center text-center text-center text-center"></i></div>
-                                <span class="text-xs font-bold uppercase tracking-widest text-center text-center text-center text-center">Nevera</span>
+                            <div class="flex flex-col items-center gap-4 text-center">
+                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-snowflake text-2xl text-center"></i></div>
+                                <span class="text-xs font-bold uppercase tracking-widest">Nevera</span>
                             </div>
-                            <div class="flex flex-col items-center gap-4 text-center text-center text-center text-center text-center">
-                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color} text-center text-center text-center text-center"><i class="fa-solid fa-leaf text-2xl text-center text-center text-center text-center"></i></div>
-                                <span class="text-xs font-bold uppercase tracking-widest text-center text-center text-center text-center text-center">Hamaca</span>
+                            <div class="flex flex-col items-center gap-4 text-center text-center text-center">
+                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-leaf text-2xl text-center"></i></div>
+                                <span class="text-xs font-bold uppercase tracking-widest text-center">Hamaca</span>
                             </div>
                             ${data.hasKitchen ? `
-                            <div class="flex flex-col items-center gap-4 text-center text-center text-center text-center text-center">
-                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color} text-center text-center text-center text-center text-center"><i class="fa-solid fa-utensils text-2xl text-center text-center text-center text-center text-center"></i></div>
-                                <span class="text-xs font-bold uppercase tracking-widest text-center text-center text-center text-center text-center text-center">Cocina</span>
+                            <div class="flex flex-col items-center gap-4 text-center text-center">
+                                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color}"><i class="fa-solid fa-utensils text-2xl text-center"></i></div>
+                                <span class="text-xs font-bold uppercase tracking-widest">Cocina</span>
                             </div>
                             ` : ''}
                         </div>
                     </div>
                     
-                    <div class="text-center text-center">
-                        <a href="https://wa.me/573107076066?text=Me interesa reservar la ${data.name}" target="_blank" class="${data.bg} text-white px-12 py-6 rounded-full font-bold shadow-2xl hover:scale-105 transition-all uppercase tracking-widest text-sm inline-block text-center text-center text-center text-center text-center">Reservar Ahora</a>
+                    <div class="text-center">
+                        <a href="https://wa.me/573107076066?text=Me interesa reservar la ${data.name}" target="_blank" class="${data.bg} text-white px-12 py-6 rounded-full font-bold shadow-2xl hover:scale-105 transition-all uppercase tracking-widest text-sm inline-block text-center text-center">Reservar Ahora</a>
                     </div>
                 </div>
             `;
