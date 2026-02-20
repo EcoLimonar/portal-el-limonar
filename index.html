@@ -128,6 +128,12 @@
             border-color: var(--verde-vibrante);
             box-shadow: 0 0 0 2px rgba(124, 179, 66, 0.1);
         }
+        
+        /* Efecto para la transición visual */
+        .image-transition {
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
     </style>
 </head>
 <body class="text-center overflow-x-hidden">
@@ -234,7 +240,7 @@
                         <div class="h-64 overflow-hidden"><img src="https://lh3.googleusercontent.com/d/1Sl7_Wk_iiwF1_xOABTLz_Flpsaz5RDYE" class="w-full h-full object-cover transition-transform duration-1000" alt="Cocina"></div>
                         <div class="p-8 flex flex-col flex-grow text-center">
                             <h3 class="text-xl font-bold mb-4 text-center">La Cocina de la Abuela</h3>
-                            <p class="text-gray-500 italic text-[14px] mb-8 flex-grow leading-relaxed text-center text-left">Sabores auténticos que nacen de nuestra tierra. Ingredientes orgánicos cosechados en la finca, preparados con el amor y el secreto de la tradición familiar. Una experiencia Km 0 que nutre el alma.</p>
+                            <p class="text-gray-500 italic text-[14px] mb-8 flex-grow leading-relaxed text-center text-left">Sabores auténticos que nacen de nuestra tierra. Ingredientes orgánicos cosechados en la finca, preparados con el amor y el secreto de la tradición familiar. <strong>Una experiencia Km 0 que nutre el alma.</strong></p>
                             <a href="https://ecolimonar.github.io/la_cocina_de_la_abuela.html/" target="_blank" class="w-full block bg-[#2B4C0B] text-white py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-verde-vibrante transition-all text-center">Ver Bitácora</a>
                         </div>
                     </div>
@@ -243,7 +249,7 @@
                         <div class="h-64 overflow-hidden"><img src="https://lh3.googleusercontent.com/d/1DHzFmNrPyujZU3y6D2H8v1qSTJC8Z6dz" class="w-full h-full object-cover transition-transform duration-1000" alt="Biodiversidad"></div>
                         <div class="p-8 flex flex-col flex-grow text-center">
                             <h3 class="text-xl font-bold mb-4 text-center">Bitácora Natural</h3>
-                            <p class="text-gray-500 italic text-[14px] mb-8 flex-grow leading-relaxed text-center text-left">Conoce a Rosita, nuestra Lorita Real, y sumérgete en el corazón del Bosque Seco Tropical. Una expedición visual por la fauna y flora que hacen de este refugio un santuario vibrante de biodiversidad.</p>
+                            <p class="text-gray-500 italic text-[14px] mb-8 flex-grow leading-relaxed text-center text-left">Conoce a Rosita, nuestra Lorita Real, y sumérgete en el corazón del Bosque Seco Tropical. Una expedición visual por la fauna y flora que hacen de este <strong>refugio un santuario vibrante de biodiversidad.</strong></p>
                             <a href="https://ecolimonar.github.io/poster_bio_limonar.html/" target="_blank" class="w-full block bg-[#2B4C0B] text-white py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-verde-vibrante transition-all text-center">Explorar</a>
                         </div>
                     </div>
@@ -252,7 +258,7 @@
                         <div class="h-64 overflow-hidden"><img src="https://lh3.googleusercontent.com/d/1JUI1g0jXAtH1lzrSCYey_EiRpcYYNPb2" class="w-full h-full object-cover transition-transform duration-1000" alt="Yoga"></div>
                         <div class="p-8 flex flex-col flex-grow text-center">
                             <h3 class="text-xl font-bold mb-4 text-amber-800 text-center">LEE Kuintro Efect</h3>
-                            <p class="text-amber-900/60 italic text-[14px] mb-8 flex-grow leading-relaxed text-center text-left">Sintoniza con los cinco elementos. Espacios diseñados para el bienestar integral donde el yoga, la meditación y el efecto Kuintro te guían hacia una reconexión profunda con tu ser y el entorno natural.</p>
+                            <p class="text-amber-900/60 italic text-[14px] mb-8 flex-grow leading-relaxed text-center text-left">Sintoniza con los cinco elementos. Espacios diseñados para el bienestar integral donde el yoga, la meditación y el efecto Kuintro te guían hacia una <strong>reconexión profunda con tu ser y el entorno natural.</strong></p>
                             <a href="https://ecolimonar.github.io/lee_kuintro_efect.html/" target="_blank" class="w-full block bg-amber-600 text-white py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-amber-700 transition-all text-center">Ver Experiencia</a>
                         </div>
                     </div>
@@ -261,7 +267,7 @@
                         <div class="h-64 overflow-hidden"><img src="https://lh3.googleusercontent.com/d/166SgU9iGfjKo_UbtKmWuSEsVBlxB8OQw" class="w-full h-full object-cover transition-transform duration-1000" alt="Eco-Living Home"></div>
                         <div class="p-8 flex flex-col flex-grow text-center">
                             <h3 class="text-xl font-bold mb-4 text-green-900 text-center">Mundo Eco-Living</h3>
-                            <p class="text-green-900/60 italic text-[14px] mb-8 flex-grow leading-relaxed text-center text-left">El arte de vivir en armonía. Desde la calma de nuestro lago hasta la energía de los senderos y el frescor de la piscina, cada rincón invita a celebrar la plenitud del entorno en los Montes de María.</p>
+                            <p class="text-green-900/60 italic text-[14px] mb-8 flex-grow leading-relaxed text-center text-left">El arte de vivir en armonía. Desde la calma de nuestro lago hasta la energía de los senderos y el frescor de la piscina, donde <strong>cada rincón invita a celebrar la plenitud del entorno en los Montes de María.</strong></p>
                             <button onclick="showEcoLiving()" class="w-full bg-green-700 text-white py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest hover:bg-green-800 transition-all text-center">Descubrir Esencia</button>
                         </div>
                     </div>
@@ -285,6 +291,19 @@
                        style="display: inline-block; background-color: #2B4C0B; color: #FAFAF2; padding: 18px 45px; border-radius: 50px; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; text-decoration: none; box-shadow: 0 15px 35px rgba(43, 76, 11, 0.2); transition: all 0.3s ease;">
                         <i class="fa-solid fa-book-open mr-2"></i> Leer Eco-Crónicas Vol. 01
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN: FOTOGRAFÍA DESTACADA TRANSICIÓN -->
+        <section class="py-12 bg-white text-center">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="rounded-[3rem] overflow-hidden shadow-2xl relative h-[400px] md:h-[600px] group">
+                    <img src="https://lh3.googleusercontent.com/d/1nmbXvGmFkUanBWMdxSnOO0UyP__BbEfU" 
+                         alt="Paisaje El Limonar" 
+                         class="w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-110">
+                    <!-- Overlay sutil para profundidad -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#2B4C0B]/30 to-transparent"></div>
                 </div>
             </div>
         </section>
@@ -368,7 +387,7 @@
                             <p class="text-stone-500 mb-8 font-light text-left">Cuéntanos cómo podemos ayudarte a refrescar tu espíritu.</p>
                             
                             <form id="eco-contact-form" class="space-y-6 text-left" onsubmit="handleFormSubmit(event)">
-                                <!-- Nueva llave de acceso Web3Forms -->
+                                <!-- Clave de acceso Web3Forms Actualizada -->
                                 <input type="hidden" name="access_key" value="9ad7a5ad-6a37-41c8-bcf0-f572e2294710">
                                 
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
