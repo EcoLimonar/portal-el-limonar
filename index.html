@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eco Hotel El Limonar | Hotel en Montes de María, Toluviejo | Lujo y Naturaleza</title>
     
+    <!-- Enlace para el Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
     <!-- Meta Tags para SEO y Redes Sociales -->
     <meta name="description" content="Descubre el Eco Hotel El Limonar en los Montes de María, Sucre. El mejor hotel ecológico para disfrutar del bosque seco tropical, avistamiento de aves y lujo natural. ¡Reserva tu experiencia sostenible!"> 
     <meta property="og:title" content="El Limonar Ecohotel">
@@ -129,7 +132,6 @@
             box-shadow: 0 0 0 2px rgba(124, 179, 66, 0.1);
         }
         
-        /* Efecto para la transición visual */
         .image-transition {
             mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
             -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
@@ -289,13 +291,13 @@
                        target="_blank" 
                        rel="noopener noreferrer" 
                        style="display: inline-block; background-color: #2B4C0B; color: #FAFAF2; padding: 18px 45px; border-radius: 50px; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; text-decoration: none; box-shadow: 0 15px 35px rgba(43, 76, 11, 0.2); transition: all 0.3s ease;">
-                        <i class="fa-solid fa-book-open mr-2"></i> Leer Eco-Crónicas Vol. 01
+                         <i class="fa-solid fa-book-open mr-2"></i> Leer Eco-Crónicas Vol. 01
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- NUEVA SECCIÓN: FOTOGRAFÍA DESTACADA TRANSICIÓN -->
+        <!-- FOTOGRAFÍA DESTACADA TRANSICIÓN -->
         <section class="py-12 bg-white text-center">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="rounded-[3rem] overflow-hidden shadow-2xl relative h-[400px] md:h-[600px] group">
@@ -387,7 +389,6 @@
                             <p class="text-stone-500 mb-8 font-light text-left">Cuéntanos cómo podemos ayudarte a refrescar tu espíritu.</p>
                             
                             <form id="eco-contact-form" class="space-y-6 text-left" onsubmit="handleFormSubmit(event)">
-                                <!-- Clave de acceso Web3Forms Actualizada -->
                                 <input type="hidden" name="access_key" value="9ad7a5ad-6a37-41c8-bcf0-f572e2294710">
                                 
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
@@ -679,8 +680,8 @@
                     </button>
                     <div class="max-w-4xl mx-auto w-full text-center animate-in text-center">
                         <span class="text-amarillo-citrico font-bold uppercase tracking-[0.3em] text-[10px] mb-2 block text-center">Experiencia Natural</span>
-                        <h1 class="text-5xl md:text-7xl font-bold mb-4 leading-tight text-center text-center">Mundo Eco-Living</h1>
-                        <p class="text-white/90 italic font-light text-lg text-center text-center">"Sintoniza con el latido de la tierra"</p>
+                        <h1 class="text-5xl md:text-7xl font-bold mb-4 leading-tight text-center">Mundo Eco-Living</h1>
+                        <p class="text-white/90 italic font-light text-lg text-center">"Sintoniza con el latido de la tierra"</p>
                     </div>
                 </header>
 
@@ -723,7 +724,7 @@
                             <div class="p-8 text-center">
                                 <i class="fa-solid fa-leaf text-3xl mb-4 text-verde-vibrante text-center"></i>
                                 <h3 class="text-2xl font-bold mb-4 text-center">Jardines Cítricos</h3>
-                                <p class="text-sm opacity-80 leading-relaxed text-center text-center">Camina entre limoneros, naranjos y flores nativas. Un festín sensorial de aromas que purifican el alma y el espíritu.</p>
+                                <p class="text-sm opacity-80 leading-relaxed text-center">Camina entre limoneros, naranjos y flores nativas. Un festín sensorial de aromas que purifican el alma y el espíritu.</p>
                             </div>
                         </div>
                         <div class="eco-amenity-card md:col-span-2 text-center">
@@ -752,20 +753,20 @@
                     </button>
                     <div class="max-w-4xl mx-auto w-full text-center animate-in text-center">
                         <span class="${data.color} font-bold uppercase tracking-[0.3em] text-[10px] mb-2 block text-center">${data.name.split(' ')[1]}</span>
-                        <h1 class="text-5xl md:text-7xl font-bold mb-2 leading-tight drop-shadow-lg text-white text-center text-center">${data.name}</h1>
-                        <p class="text-white/90 italic font-light tracking-wide text-lg text-center text-center">"${data.tagline}"</p>
+                        <h1 class="text-5xl md:text-7xl font-bold mb-2 leading-tight drop-shadow-lg text-white text-center">${data.name}</h1>
+                        <p class="text-white/90 italic font-light tracking-wide text-lg text-center">"${data.tagline}"</p>
                     </div>
                 </header>
 
                 <div class="max-w-4xl mx-auto px-6 -mt-16 relative z-10 text-center">
                     <div class="bg-white rounded-[3rem] p-10 shadow-2xl mb-16 text-center text-left">
                         <div class="flex flex-col md:flex-row justify-between items-center gap-8 text-left">
-                            <div class="flex-1 text-left text-left">
+                            <div class="flex-1 text-left">
                                 <div class="flex items-center gap-3 mb-6 text-left">
                                     <div class="w-12 h-1 ${data.bg} rounded-full text-left"></div>
                                     <span class="text-[10px] font-black uppercase tracking-widest ${data.color} text-left">${data.concept}</span>
                                 </div>
-                                <p class="text-gray-700 leading-relaxed font-light text-lg italic text-left text-left">${data.desc}</p>
+                                <p class="text-gray-700 leading-relaxed font-light text-lg italic text-left">${data.desc}</p>
                             </div>
                             <div class="bg-gray-50 px-8 py-6 rounded-[2rem] border border-gray-100 text-center shrink-0">
                                 <span class="block text-4xl font-bold text-[#2B4C0B] text-center">${data.capacity.split(' ')[0]}</span>
@@ -788,28 +789,28 @@
                     </div>
 
                     <div class="bg-[#F2F2E6] p-10 rounded-[3rem] border border-gray-100 mb-16 text-center">
-                        <h3 class="text-xl font-bold mb-10 text-center uppercase tracking-widest text-[#2B4C0B] text-center">Comodidades Incluidas</h3>
+                        <h3 class="text-xl font-bold mb-10 text-center uppercase tracking-widest text-[#2B4C0B]">Comodidades Incluidas</h3>
                         <div class="grid grid-cols-2 ${data.hasKitchen ? 'md:grid-cols-5' : 'md:grid-cols-4'} gap-8 text-center">
-                            <div class="flex flex-col items-center gap-4 text-center text-center">
+                            <div class="flex flex-col items-center gap-4 text-center">
                                 <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color} text-center mx-auto"><i class="fa-solid fa-shower text-2xl text-center"></i></div>
                                 <span class="text-xs font-bold uppercase tracking-widest text-center">Baño Interno</span>
                             </div>
-                            <div class="flex flex-col items-center gap-4 text-center text-center">
+                            <div class="flex flex-col items-center gap-4 text-center">
                                 <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color} text-center mx-auto"><i class="fa-solid fa-wind text-2xl text-center"></i></div>
-                                <span class="text-xs font-bold uppercase tracking-widest text-center">Aire Acond.</span>
+                                <span class="text-xs font-bold uppercase tracking-widest">Aire Acond.</span>
                             </div>
-                            <div class="flex flex-col items-center gap-4 text-center text-center">
+                            <div class="flex flex-col items-center gap-4 text-center">
                                 <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color} text-center mx-auto"><i class="fa-solid fa-snowflake text-2xl text-center"></i></div>
-                                <span class="text-xs font-bold uppercase tracking-widest text-center">Nevera</span>
+                                <span class="text-xs font-bold uppercase tracking-widest">Nevera</span>
                             </div>
-                            <div class="flex flex-col items-center gap-4 text-center text-center">
+                            <div class="flex flex-col items-center gap-4 text-center">
                                 <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color} text-center mx-auto"><i class="fa-solid fa-leaf text-2xl text-center"></i></div>
-                                <span class="text-xs font-bold uppercase tracking-widest text-center">Hamaca</span>
+                                <span class="text-xs font-bold uppercase tracking-widest">Hamaca</span>
                             </div>
                             ${data.hasKitchen ? `
-                            <div class="flex flex-col items-center gap-4 text-center text-center">
+                            <div class="flex flex-col items-center gap-4 text-center">
                                 <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-md ${data.color} text-center mx-auto"><i class="fa-solid fa-utensils text-2xl text-center"></i></div>
-                                <span class="text-xs font-bold uppercase tracking-widest text-center">Cocina</span>
+                                <span class="text-xs font-bold uppercase tracking-widest">Cocina</span>
                             </div>
                             ` : ''}
                         </div>
@@ -838,6 +839,8 @@
                 toggle?.classList.replace('text-[#2B4C0B]', 'text-white');
             }
         });
+        
+        window.onload = () => showView('home');
     </script>
 </body>
 </html>
